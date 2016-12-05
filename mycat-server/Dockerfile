@@ -1,7 +1,6 @@
 FROM openjdk:8-jre
 Maintainer 张仪
-ADD mycat.tgz /opt/
-RUN mkdir /opt/mycat/logs/
+ADD Mycat-server-*.tar.gz /opt/
 ENV MYCAT_HOME=/opt/mycat
 ADD start.sh /opt/
 RUN chmod +x /opt/start.sh
