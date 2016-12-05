@@ -3,5 +3,7 @@ Maintainer 张仪
 ADD mycat.tgz /opt/
 RUN mkdir /opt/mycat/logs/
 ENV MYCAT_HOME=/opt/mycat
+ADD start.sh /opt/
+RUN chmod +x /opt/start.sh
 EXPOSE 8066 9066
-CMD [ "/opt/mycat/bin/mycat", "console" ]
+CMD [ "/opt/start.sh", "console" ]
