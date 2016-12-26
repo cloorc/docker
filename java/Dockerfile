@@ -1,6 +1,6 @@
 FROM alpine:3.4
 
-MAINTAINER 张仪 <zhangh@dtdream.coms>
+MAINTAINER 张仪
 
 RUN apk add --no-cache --update-cache bash
 
