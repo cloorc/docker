@@ -2,6 +2,8 @@ FROM soiff/jdk:8u111
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 
+RUN apk add --no-cache --update-cache curl
+
 WORKDIR /opt
 
 ENV DEPLOY_DIR taobao-tomcat-7.0.59/deploy
