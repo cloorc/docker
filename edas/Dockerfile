@@ -17,4 +17,8 @@ ENV CATALINA_HOME /opt/taobao-tomcat-7.0.59
 
 WORKDIR ${CATALINA_HOME}/bin
 
+ENV JPDA_ADDRESS 0.0.0.0:5005
+
+EXPOSE 8080 5005 8443 8009
+
 CMD [ "/bin/sh", "catalina.sh", "run" ]
