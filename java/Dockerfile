@@ -1,4 +1,4 @@
-FROM soiff/minimal:1.0
+FROM soiff/minimal:latest
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 
