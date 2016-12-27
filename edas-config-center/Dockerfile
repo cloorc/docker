@@ -1,4 +1,4 @@
-FROM soiff/java:8u111
+FROM soiff/jdk:8u111
 
 MAINTAINER 张仪 <wittcnezh@foxmail.com>
 
