@@ -15,4 +15,4 @@ RUN mkdir edas-config-center && \
 
 WORKDIR /opt/edas-config-center
 
-CMD ["/bin/sh", "startup.sh"]
+CMD ["/bin/sh", "./startup.sh"]
