@@ -1,7 +1,8 @@
-FROM minimal:1.0
+FROM soiff/minimal:1.0
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 
+ENV JAVA_VERSION_MAJOR=8 JAVA_VERSION_MINOR=111 JAVA_VERSION_BUILD=14 JAVA_PACKAGE=jdk
 ENV JDK_VERSION="jdk1.${JAVA_VERSION_MAJOR}.0_${JAVA_VERSION_MINOR}"
 WORKDIR /opt
 RUN curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" \
