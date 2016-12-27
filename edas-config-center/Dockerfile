@@ -5,7 +5,7 @@ MAINTAINER 张仪 <wittcnezh@foxmail.com>
 WORKDIR /opt
 
 # Let's roll
-RUN apk add --update zip unzip
+RUN apk add --update curl unzip
 
 RUN mkdir edas-config-center && \
     cd edas-config-center && \
@@ -15,4 +15,4 @@ RUN mkdir edas-config-center && \
 
 WORKDIR /opt/edas-config-center
 
-CMD ["bash", "startup.sh"]
+CMD ["/bin/sh", "startup.sh"]
