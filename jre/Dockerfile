@@ -6,7 +6,7 @@ ENV JAVA_VERSION_MAJOR=8 JAVA_VERSION_MINOR=111 JAVA_VERSION_BUILD=14 JAVA_PACKA
 ENV JRE_VERSION="${JAVA_PACKAGE}1.${JAVA_VERSION_MAJOR}.0_${JAVA_VERSION_MINOR}"
 WORKDIR /opt
 RUN curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" \
-    "http://download.oracle.com/otn-pub/java/${JAVA_PACKAGE}/${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-b${JAVA_VERSION_BUILD}/${JAVA_PACKAGE}-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz" | tar -xzf - && \
+    "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-b${JAVA_VERSION_BUILD}/${JAVA_PACKAGE}-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz" | tar -xzf - && \
     apk del curl ca-certificates && \
     rm /opt/${JRE_VERSION}/bin/jjs 2>/dev/null && \
     rm /opt/${JRE_VERSION}/bin/keytool 2>/dev/null && \
