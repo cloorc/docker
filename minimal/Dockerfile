@@ -1,4 +1,4 @@
-FROM soiff/bash:1.0
+FROM soiff/bash:latest
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 
