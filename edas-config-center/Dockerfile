@@ -13,4 +13,4 @@ RUN curl -skSL http://edas-public.oss-cn-hangzhou.aliyuncs.com/install_package/e
 
 WORKDIR /opt/edas-config-center
 
-CMD ["/bin/sh", "startup.sh"]
+ENTRYPOINT ["/bin/sh", "startup.sh", "&&", "tail", "-f", "logs/config-center.log"]
