@@ -25,8 +25,8 @@ RUN curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" \
     rm -rf /tmp/* /var/cache/apk/* 2>/dev/null && \
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
 
-ENV JAVA_HOME=/opt/java
-ENV PATH="${PATH}:${JAVA_HOME}/bin"
+ENV JAVA_HOME /opt/${JDK_VERSION}
+ENV PATH $PATH:$JAVA_HOME/bin
 
 CMD ["java", "-version"]
 
