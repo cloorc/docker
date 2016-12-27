@@ -5,7 +5,7 @@ MAINTAINER 张仪 <wittcnezh@foxmail.com>
 WORKDIR /opt
 
 # Let's roll
-RUN	apk add --update zip unzip
+RUN	apk add --update sh zip unzip
 
 RUN mkdir edas-config-center && \
     cd edas-config-center && \
