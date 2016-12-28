@@ -1,1 +1,1 @@
-# docker
+# Common docker images for development
