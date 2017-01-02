@@ -1,4 +1,4 @@
-FROM soiff/jre:8u111
+FROM index.tenxcloud.com/revolc/openjdk8-jre:latest
 
 MAINTAINER 张仪 <wittcnezh@foxmail.com>
 
