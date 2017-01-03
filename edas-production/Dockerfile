@@ -2,8 +2,6 @@ FROM index.tenxcloud.com/revolc/openjdk8-jre:latest
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 
-RUN apk add --no-cache --update-cache curl
-
 WORKDIR /opt
 
 ENV RELEASE_TAOBAO_TOMCAT "http://edas-public.oss-cn-hangzhou.aliyuncs.com/install_package/tomcat/taobao-tomcat-7.0.59.tgz?spm=5176.doc44158.2.1.uj170t&file=taobao-tomcat-7.0.59.tgz"
