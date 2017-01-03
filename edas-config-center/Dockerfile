@@ -12,4 +12,4 @@ WORKDIR /opt/edas-config-center
 
 EXPOSE 8080 9600
 
-CMD ["java", "-Daddress.server.ip=\${SERVER_IP:-}", "-jar", "edas-config-center.jar" ]
+CMD ["$JAVA_HOME/bin/java", "-Daddress.server.ip=\${SERVER_IP:-}", "-jar", "edas-config-center.jar" ]
