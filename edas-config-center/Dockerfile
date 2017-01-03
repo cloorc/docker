@@ -10,6 +10,8 @@ RUN curl -skSL http://edas-public.oss-cn-hangzhou.aliyuncs.com/install_package/e
 
 WORKDIR /opt/edas-config-center
 
+ADD run.sh .
+
 EXPOSE 8080 9600
 
-CMD ["$JAVA_HOME/bin/java", "-Daddress.server.ip=\${SERVER_IP:-}", "-jar", "edas-config-center.jar" ]
+CMD [ "/bin/sh", "run.sh" ]
