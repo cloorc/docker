@@ -10,7 +10,7 @@ RUN curl -skSL http://edas-public.oss-cn-hangzhou.aliyuncs.com/install_package/e
 
 WORKDIR /opt/edas-config-center
 
-ADD run.sh .
+ADD run.sh /opt/edas-config-center/
 
 EXPOSE 8080 9600
 
