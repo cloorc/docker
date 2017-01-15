@@ -4,4 +4,4 @@ MAINTAINER 张仪 <wittcnezh@#foxmail.com>
 
 RUN apk add --no-cache --update mariadb
 
-ENTRYPOINT ["/usr/bin/mysqld_multi", "--console"]
+CMD ["/usr/bin/mysqld_multi", "--console"]
