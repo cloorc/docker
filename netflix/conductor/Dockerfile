@@ -1,11 +1,15 @@
-FROM index.tenxcloud.com/revolc/openjdk8-jre:latest
+FROM alpine:3.5
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 
+RUN apk add --no-cache --update-cache curl unzip bash openjdk8-jre git
+
+ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
+ENV PATH $JAVA_HOME/bin:$PATH
+
 WORKDIR /opt
 
-RUN apk add --no-cache --update-cache git && \
-	git clone https://github.com/Netflix/conductor.git && \
+RUN git clone https://github.com/Netflix/conductor.git && \
     cd conductor && \
     ./gradlew shadowJar && \
     cp server/build/libs/conductor-server-*.jar /opt/ && \
