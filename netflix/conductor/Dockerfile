@@ -1,4 +1,4 @@
-FROM soiff/openjdk8-jre:latest
+FROM index.tenxcloud.com/revolc/openjdk8-jre:latest
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 
@@ -6,10 +6,10 @@ WORKDIR /opt
 
 RUN apk add --no-cache --update-cache git && \
 	git clone https://github.com/Netflix/conductor.git && \
-    pushd conductor && \
+    cd conductor && \
     ./gradlew shadowJar && \
     cp server/build/libs/conductor-server-*.jar /opt/ && \
-    popd && \
+    cd .. && \
     rm -rf conductor && \
     apk remove git
 
