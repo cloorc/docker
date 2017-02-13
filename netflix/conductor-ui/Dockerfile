@@ -15,7 +15,7 @@ RUN git clone https://github.com/Netflix/conductor.git && \
     cd .. && \
     mv ./ui /opt/ && \
     rm -rf conductor && \
-    apk remove git
+    apk del git
 
 WORKDIR /opt/ui
 

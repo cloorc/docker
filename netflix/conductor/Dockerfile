@@ -15,6 +15,6 @@ RUN git clone https://github.com/Netflix/conductor.git && \
     cp server/build/libs/conductor-server-*.jar /opt/conductor-server.jar && \
     cd .. && \
     rm -rf conductor && \
-    apk remove git
+    apk del git
 
 CMD ["java", "-Dworkflow.elasticsearch.url=${ES_URL:-127.0.0.1:9300}", "-DloadSample=true", "-jar", "/opt/conductor-server.jar"]
