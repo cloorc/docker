@@ -22,4 +22,4 @@ WORKDIR /opt/ui
 
 # env WEBSITE_HOSTNAME 127.0.0.1:8080
 
-CMD ["gulp", "watch"]
+CMD ["/opt/ui/node_modules/.bin/gulp", "serve"]
