@@ -11,7 +11,7 @@ WORKDIR /opt
 
 RUN git clone https://github.com/Netflix/conductor.git && \
     cd conductor/ui && \
-    npm install -g && \
+    npm install && \
     cd .. && \
     mv ui /opt/ && \
     cd .. && \
