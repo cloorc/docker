@@ -6,7 +6,7 @@ RUN apk add --no-cache --update-cache curl bash openjdk8-jre
 
 WORKDIR /opt/
 
-RUN curl -skl http://apache.fayea.com/zookeeper/zookeeper-3.4.9/zookeeper-3.4.9.tar.gz|tar -xzf && \
+RUN curl -skl http://apache.fayea.com/zookeeper/zookeeper-3.4.9/zookeeper-3.4.9.tar.gz|tar -xzf - && \
     mv /opt/zookeeper-3.4.9/conf/zoo_sample.cfg /opt/zookeeper-3.4.9/conf/zoo.cfg
 
 WORKDIR /opt/zookeeper-3.4.9
