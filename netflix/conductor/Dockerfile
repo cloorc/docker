@@ -12,7 +12,7 @@ WORKDIR /opt
 
 RUN git clone https://github.com/Netflix/conductor.git && \
     cd conductor && \
-    git checkout 1.7.2-rc5 && \
+    git checkout v1.7.2-rc5 && \
     ./gradlew shadowJar && \
     cp server/build/libs/conductor-server-*.jar /opt/conductor-server.jar && \
     cd .. && \
