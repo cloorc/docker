@@ -5,7 +5,8 @@ RUN apk add --no-cache --update-cache python && \
   cd /home/admin/ && \
   curl -skSo jstorm-2.2.1.zip -L https://github.com/alibaba/jstorm/releases/download/2.2.1/jstorm-2.2.1.zip && \
   unzip jstorm-2.2.1.zip && \
-  mv jstorm-2.2.1 jstorm
+  mv jstorm-2.2.1 jstorm && \
+  rm -vf jstorm-2.2.1.zip
 
 WORKDIR /home/admin/jstorm
 
