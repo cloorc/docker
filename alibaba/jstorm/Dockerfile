@@ -3,7 +3,8 @@ FROM index.tenxcloud.com/revolc/openjdk8-jre:latest
 RUN apk add --no-cache --update-cache python && \
   mkdir /home/admin/ && \
   cd /home/admin/ && \
-  curl -skSL https://github.com/alibaba/jstorm/releases/download/2.2.1/jstorm-2.2.1.zip|unzip && \
+  curl -skSo jstorm-2.2.1.zip -L https://github.com/alibaba/jstorm/releases/download/2.2.1/jstorm-2.2.1.zip && \
+  unzip jstorm-2.2.1.zip && \
   mv jstorm-2.2.1 jstorm
 
 WORKDIR /home/admin/jstorm
