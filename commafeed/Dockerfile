@@ -1,8 +1,11 @@
-FROM index.tenxcloud.com/revolc/openjdk8-jre:latest
+FROM alpine:3.5
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 
-RUN test ! -e /opt && mkdir -vp /opt
+RUN apk add --no-cache --update-cache curl bash openjdk8-jre && test ! -e /opt && mkdir -vp /opt
+
+ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
+ENV PATH $JAVA_HOME/bin:$PATH
 
 WORKDIR /opt
 
