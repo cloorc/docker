@@ -1,7 +1,7 @@
 FROM alpine:3.6
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
-RUN apk add --no-cache --update-cache wget openjdk8-jre && \
+RUN apk add --no-cache --update-cache curl wget openjdk8-jre && \
     mkdir /opt && \
     curl -skl http://mirror.bit.edu.cn/apache/tomcat/tomcat-7/v7.0.76/bin/apache-tomcat-7.0.76.tar.gz|tar -C /opt -xzf - && \
     mv -v /opt/apache-tomcat-7.0.76 /opt/apache-tomcat && \
