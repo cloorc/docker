@@ -1,4 +1,4 @@
-FROM index.tenxcloud.com/revolc/tomcat:7.0.76
+FROM alpine:3.6
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 RUN apk add --no-cache --update-cache wget openjdk8-jre && \
