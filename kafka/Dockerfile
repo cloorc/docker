@@ -10,7 +10,7 @@ RUN mkdir /opt && \
 
 WORKDIR /opt/kafka
 
-ENV ZOOKEEPER ${ZOOKEEPER:-localhost:2181}
+ENV ZOOKEEPER ${ZOOKEEPER}
 
 EXPOSE 9092
 
