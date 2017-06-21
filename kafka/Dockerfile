@@ -1,4 +1,4 @@
-FROM index.tenxcloud.com/revolc/openjdk8-jre:latest
+FROM registry.cn-hangzhou.aliyuncs.com/revolc/openjdk8-jre:latest
 
 MAINTAINER 张仪 <wittcnezh@foxmail.coms>
 
