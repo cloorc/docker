@@ -12,6 +12,6 @@ WORKDIR /opt
 
 ENV JAVA_OPTS ${JAVA_OPTS}
 
-EXPOSE 9092
+EXPOSE 8080
 
 CMD ["/opt/executor.sh"]
