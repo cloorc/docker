@@ -11,7 +11,7 @@ RUN mkdir /opt && \
     sed -i "s/#delete.topic.enable=true/delete.topic.enable=true/g" /opt/kafka/config/server.properties && \
     grep -n "^exec" /opt/kafka/bin/kafka-server-start.sh|awk -F: '{print $1}'|while read n; do sed -i "${n}ised -i \"s/zookeeper.connect=.*/zookeeper.connect=\${ZOOKEEPER}/g\" /opt/kafka/config/server.properties" /opt/kafka/bin/kafka-server-start.sh; done && \
     grep -n "^exec" /opt/kafka/bin/kafka-server-start.sh|awk -F: '{print $1}'|while read n; do sed -i "${n}ised -i \"s/#listeners=/listeners=/g\" /opt/kafka/config/server.properties" /opt/kafka/bin/kafka-server-start.sh; done && \
-    grep -n "^exec" /opt/kafka/bin/kafka-server-start.sh|awk -F: '{print $1}'|while read n; do sed -i "${n}ised -i \"s/#advertised.listeners=.*/advertised.listeners=\${KLISTENER//\\//\\\\/}/g\" /opt/kafka/config/server.properties" /opt/kafka/bin/kafka-server-start.sh; done
+    grep -n "^exec" /opt/kafka/bin/kafka-server-start.sh|awk -F: '{print $1}'|while read n; do sed -i "${n}ised -i \"s/#advertised.listeners=.*/advertised.listeners=PLAINTEXT:\\\\/\\\\/\${KLISTENER}/g\" /opt/kafka/config/server.properties" /opt/kafka/bin/kafka-server-start.sh; done
 
 WORKDIR /opt/kafka
 
