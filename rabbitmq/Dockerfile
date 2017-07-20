@@ -1,4 +1,4 @@
-FROM alpine:v3.5
+FROM alpine:3.5
 
 MAINTAINER 张仪 <wittcnezh@foxmail.com>
 
