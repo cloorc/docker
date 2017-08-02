@@ -6,7 +6,7 @@ ENV ZOOKEEPER ${ZOOKEEPER}
 ENV KLISTENER ${KLISTENER}
 
 RUN mkdir /opt && \
-    curl -skl http://apache.fayea.com/kafka/0.11.0.0/kafka_2.11-0.11.0.0.tgz|tar -C /opt -xzf - && \
+    curl -skl http://mirror.bit.edu.cn/apache/kafka/0.11.0.0/kafka_2.11-0.11.0.0.tgz|tar -C /opt -xzf - && \
     mv -v /opt/kafka_* /opt/kafka && \
     sed -i "s/#delete.topic.enable=true/delete.topic.enable=true/g" /opt/kafka/config/server.properties && \
     grep -n "^exec" /opt/kafka/bin/kafka-server-start.sh|awk -F: '{print $1}'|while read n; do sed -i "${n}ised -i \"s/zookeeper.connect=.*/zookeeper.connect=\${ZOOKEEPER}/g\" /opt/kafka/config/server.properties" /opt/kafka/bin/kafka-server-start.sh; done && \
