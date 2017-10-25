@@ -2,7 +2,7 @@ FROM alpine:3.6
 
 MAINTAINER 张仪 <wittcnezh@foxmail.com>
 
-RUN apk add --no-cache docker maven git &&
+RUN apk add --no-cache docker maven git && \
   tee /opt/worker <<EOF
   #!/usr/bin/env bash
   set -x
