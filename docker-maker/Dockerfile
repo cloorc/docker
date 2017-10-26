@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM docker
 
 MAINTAINER 张仪 <wittcnezh@foxmail.com>
 
