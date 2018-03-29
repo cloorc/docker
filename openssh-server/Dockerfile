@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum install -y openssh openssh-server && \
+RUN yum install -y openssh openssh-server tar wget && \
   wget -o /tmp/jdk-8u161-linux-x64.rpm --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.rpm && \
   yum localinstall jdk-8u161-linux-x64.rpm && \
   rm /tmp/jdk-8u161-linux-x64.rpm && \
