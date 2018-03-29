@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum install -y openssh
+RUN yum install -y openssh openssh-server
 
 EXPOSE 22
 
