@@ -1,3 +1,7 @@
 FROM centos:7
 
-ENTRYPOINT [ "/bin/bash" ]
+RUN yum install -y openssh
+
+EXPOSE 22
+
+CMD ["/usr/sbin/sshd", "-D"]
