@@ -1,0 +1,1 @@
+FROM kibana:6.2.4
