@@ -1,0 +1,8 @@
+FROM debian:stable-slim
+
+MAINTAINER Cloorc <wittcnezh@foxmail.com>
+
+RUN apt update && \
+    apt install -y libaio1 && \
+    apt clean -y && \
+    rm -rvf /var/lib/apt/lists/*

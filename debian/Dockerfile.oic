@@ -1,0 +1,12 @@
+FROM debian:stable-slim AS builder
+
+RUN apt update && \
+    apt install wget unzip -y && \
+    wget --no-check-certificate -O /opt/instantclient-basic.zip https://download.oracle.com/otn_software/linux/instantclient/2360000/instantclient-basic-linux.x64-23.6.0.24.10.zip && \
+    cd /opt && \
+    unzip instantclient-basic.zip
+
+FROM debian:stable-slim
+
+COPY --from=builder /opt /opt
+
